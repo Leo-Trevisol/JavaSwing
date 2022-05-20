@@ -13,7 +13,7 @@ public class Classe4 {
     private JFrame janela;
 
 public Classe4(){
- janela = new JFrame("Janela com componentes");
+ janela = new JFrame("Janela com Flowlayout");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
   JButton btn1 = new JButton("Botão 1");
@@ -22,7 +22,7 @@ public Classe4(){
 
 
   Container cont = janela.getContentPane();
-  cont.setLayout (new FlowLayout(FlowLayout.CENTER));
+  cont.setLayout (new FlowLayout(FlowLayout.CENTER));  //FLOWLAYOUT ORGANIZA OS ITENS UM POR UM NA HORIZONTAL
   
   cont.add(btn1);
   cont.add(btn2);

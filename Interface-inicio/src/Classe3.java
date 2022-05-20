@@ -13,7 +13,7 @@ public class Classe3 {
     private JFrame janela;
 
 public Classe3(){
- janela = new JFrame("Janela com componentes");
+ janela = new JFrame("Janela com Borderlayout");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
   JPanel p1 = new JPanel();
@@ -42,7 +42,7 @@ public Classe3(){
   p5.add(btn4);
   
    Container cont = janela.getContentPane();
-   cont.setLayout(new BorderLayout());
+   cont.setLayout(new BorderLayout()); //BORDERLAYOUT DEFINE OS ITEN EM 5 DIRECOES =
    cont.add(p1,BorderLayout.NORTH);
    cont.add(p2,BorderLayout.SOUTH);
    cont.add(p3,BorderLayout.EAST);

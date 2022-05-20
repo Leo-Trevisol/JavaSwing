@@ -12,7 +12,7 @@ public class Classe5 {
     private JFrame janela;
 
 public Classe5(){
- janela = new JFrame("Janela com componentes");
+ janela = new JFrame("Janela com Gridlayout");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
   JButton btn1 = new JButton("A");
@@ -30,7 +30,7 @@ public Classe5(){
 
 
   Container cont = janela.getContentPane();
-  cont.setLayout(new GridLayout(2,6));
+  cont.setLayout(new GridLayout(2,6));  //GRID LAYOUT DEFINE OS ITENS EM LINHAS E COLUNAS
   
   cont.add(btn1);
   cont.add(btn2);
