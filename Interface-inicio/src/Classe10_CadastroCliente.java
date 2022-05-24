@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.text.*;
 
-public class Classe10 extends JFrame{
+public class Classe10_CadastroCliente extends JFrame{
     JLabel rotulo1, rotulo2, rotulo3, rotulo4, rotulo5, rotulo6, rotulo7, rotulo8, rotulo9, rotulo10, rotulo11, rotulo12;
     JTextField texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9;
     JRadioButton botao1, botao2;
@@ -19,7 +19,7 @@ public class Classe10 extends JFrame{
     JButton botaoi, botaol, botaos, botaoc, botaoct;
     ImageIcon icone, icone1, icone2, icone3, icone4, icone5;
 
-    public Classe10(){
+    public Classe10_CadastroCliente(){
         super("Cadastro de Cliente");
         icone = new ImageIcon("look-for1.png");
         setIconImage(icone.getImage());
@@ -176,7 +176,7 @@ public class Classe10 extends JFrame{
         setLocationRelativeTo(null);
     }
     public static void main(String[] args) {
-        Classe10 app = new Classe10();
+        Classe10_CadastroCliente app = new Classe10_CadastroCliente();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
