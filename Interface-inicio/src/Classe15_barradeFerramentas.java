@@ -1,12 +1,9 @@
 
 import javax.swing.*;
-import javax.swing.text.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.text.*;
 
 
-public class Classe15 extends JFrame{
+public class Classe15_barradeFerramentas extends JFrame{
 
     static JToolBar tb;
 
@@ -43,7 +40,7 @@ public class Classe15 extends JFrame{
         j.setSize(500,500);
 
 
-        Classe15 app = new Classe15();
+        Classe15_barradeFerramentas app = new Classe15_barradeFerramentas();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
