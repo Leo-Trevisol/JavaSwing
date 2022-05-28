@@ -1,11 +1,7 @@
 
 import javax.swing.*;
-import javax.swing.text.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.text.*;
 
-public class Classe17 extends JFrame {
+public class Classe17_Menu extends JFrame {
 
     static JMenuBar mb;
 
@@ -38,7 +34,7 @@ public class Classe17 extends JFrame {
         f.setSize(500,500);
         f.setVisible(true);
 
-        Classe17 app = new Classe17();
+        Classe17_Menu app = new Classe17_Menu();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

@@ -1,12 +1,10 @@
 
 import javax.swing.*;
-import javax.swing.text.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.text.*;
 
 
-public  class Classe16 extends JFrame implements ActionListener, ItemListener{
+public  class Classe16_ComboBox extends JFrame implements ActionListener, ItemListener{
 
     static JToolBar tb;
 
@@ -21,7 +19,7 @@ public  class Classe16 extends JFrame implements ActionListener, ItemListener{
 
     public static void main(String[] args) {
 
-        Classe16 to = new Classe16();
+        Classe16_ComboBox to = new Classe16_ComboBox();
 
         l = new JLabel ("Nothing Selected");
         ll = new JLabel ("Nothung Selected");
@@ -70,14 +68,14 @@ public  class Classe16 extends JFrame implements ActionListener, ItemListener{
 
     @Override
     public void itemStateChanged(ItemEvent e) {
-        l.setText(x.getActionCommand() + "Select.");
+        l.setText(x.getActionCommand() + " Select.");
     }
 
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        ll.setText(x.getSelectedItem() + "Selected.");
+        ll.setText(x.getSelectedItem() + " Selected.");
     }
 
 
