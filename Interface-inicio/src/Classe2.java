@@ -18,7 +18,7 @@ public Classe2(){
   cont.setLayout(new FlowLayout());
   cont.add(button);
   cont.add(rotulo);
-  janela.setSize(500,400);
+  janela.setSize(500,200);
   janela.setVisible(true);
   
   

@@ -5,6 +5,8 @@ public class Classe {
 public Classe(){
  janela = new JFrame("Primeira janela");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
  janela.setSize(400,300);
  janela.setVisible(true);
 
