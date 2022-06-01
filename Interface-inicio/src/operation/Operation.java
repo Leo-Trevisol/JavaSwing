@@ -35,9 +35,9 @@ public class Operation {
 
     }
 
-    public double porcentagem (double number1){
+    public double porcentagem (double number1, double number2){
 
-        double result = number1 * -1;
+        double result = number1 - ((number2 / 100) * number1);
         return result;
 
     }
@@ -51,7 +51,7 @@ public class Operation {
 
     public double fracao (double number1){
 
-        double result = number1 * -1;
+        double result = 1 / number1;
         return result;
 
 
