@@ -1,5 +1,4 @@
 
-
 import javax.swing.*;
 import javax.swing.text.*;
 import java.awt.*;
@@ -7,17 +6,29 @@ import java.awt.event.*;
 import java.text.*;
 
 public class Classe10_CadastroCliente extends JFrame{
-    JLabel rotulo1, rotulo2, rotulo3, rotulo4, rotulo5, rotulo6, rotulo7, rotulo8, rotulo9, rotulo10, rotulo11, rotulo12;
-    JTextField texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9;
-    JRadioButton botao1, botao2;
-    JComboBox lista;
+
+    //CRIANDO VARIAVIES===
+
+    JLabel rotulo1, rotulo2, rotulo3, rotulo4, rotulo5, rotulo6,
+            rotulo7, rotulo8, rotulo9, rotulo10, rotulo11, rotulo12;  //JLABEL: BLOCO DE TEXTO
+
+    JTextField texto1, texto2, texto3, texto4, texto5, texto6, texto7, texto8, texto9; //JTEXTFIELD: DIGITAR O TEXTO
+
+    JRadioButton botao1, botao2; //RADIOBUTTON: BOTAO DE CHECKBOX DE BOLINHA
+
+    JComboBox lista; //COMBOBOX: LISTA
+
     String estados[]={"Rio de Janeiro","São Paulo","Acre",
             "Santa Catarina","Rio Grande do Sul",
-            "Bahia","Brasília"};
-    JFormattedTextField cel, tel, datac, datan;
-    MaskFormatter mascaracel, mascaratel, mascaradatac, mascaradatan;
+            "Bahia","Brasília"}; //VETOR DE ESTADOS PARA ADICIONAR NO JCOMBOBOX
+
+    MaskFormatter mascaracel, mascaratel, mascaradatac, mascaradatan;// MASKFORMATTER: CRIA UMA FORMATCAO
+
+    JFormattedTextField cel, tel, datac, datan; //FORMATTEDTEXTFIELD: RECEBE A FORMATACAO DO MASKFORMATTER
+
     JButton botaoi, botaol, botaos, botaoc, botaoct;
-    ImageIcon icone, icone1, icone2, icone3, icone4, icone5;
+
+    ImageIcon icone, icone1, icone2, icone3, icone4, icone5; //IMAGEICON: IMAGEM/ICONE
 
     public Classe10_CadastroCliente(){
         super("Cadastro de Cliente");

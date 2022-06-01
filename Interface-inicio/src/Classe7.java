@@ -23,6 +23,10 @@ import javax.swing.JPanel;
         public Classe7() {
             janela = new JFrame("Janela com GridLayout 8");
             janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+            //SETANDO AS VARIAVEIS DENTRO DE UM CONSTRUTOR ===
+
             JButton b1 = new JButton("A");
             JButton b2 = new JButton("B");
             JButton b3 = new JButton("C");
@@ -30,7 +34,9 @@ import javax.swing.JPanel;
             JButton b5 = new JButton("E");
             JButton b6 = new JButton("F");
 
-            JPanel p = new JPanel(new GridLayout(3,2));
+            //CRIANDO PAINEL EM GRID E ADICIONANDO OS BOTOES===
+
+            JPanel p = new JPanel(new GridLayout(1,6));
             p.add(b1);
             p.add(b2);
             p.add(b3);
@@ -38,12 +44,10 @@ import javax.swing.JPanel;
             p.add(b5);
             p.add(b6);
 
+            //CRIANDO CONTAINER E ADICIONANDO PAINEIS===
+
            Container c = janela.getContentPane();
-               c.add(p,BorderLayout.CENTER);
-               c.add(p,BorderLayout.NORTH);
-               c.add(p,BorderLayout.SOUTH);
-               c.add(p,BorderLayout.WEST);
-               c.add(p,BorderLayout.EAST);
+               c.add(p);
 
             janela.setSize(400,200);
             janela.setVisible(true);

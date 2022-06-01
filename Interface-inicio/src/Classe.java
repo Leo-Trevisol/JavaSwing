@@ -1,9 +1,14 @@
 import javax.swing.JFrame;
 public class Classe {
-    private JFrame janela;
+
+    // ADICIONANDO VARIAVEIS ===
+
+    private JFrame janela;  //JFrame funciona como a janela principal onde componentes como rótulos, botões.
+
+    //SETANDO AS VARIAVEIS DENTRO DE UM CONSTRUTOR ===
 
 public Classe(){
- janela = new JFrame("Primeira janela");
+  janela = new JFrame("Primeira janela");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

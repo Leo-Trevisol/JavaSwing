@@ -20,19 +20,16 @@ public class Classe8{
         janela = new JFrame("Exercício");
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Painel superior
+        // PAINEL DE CIMA ===
+        //Criando um panel, setando a cor dele, criando e adicionando um botao dentro do panel.
         pcima = new JPanel();
         pcima.setBackground(Color.ORANGE);
         b = new JButton("Calcular");
         pcima.add(b);
 
-        // Painel inferior
-        pbaixo = new JPanel();
-        pbaixo.setBackground(Color.YELLOW);
-        tempo = new JLabel("Tempo = 0");
-        pbaixo.add(tempo);
-
-        // Painel central
+        // PAINEL DO MEIO ===
+        // Criando um panel de grid layout, setando a cor dele,
+        // criando 3 labels e 3 textfield e adicionando no panel.
         pcentro = new JPanel(new GridLayout(3,2));
         pcentro.setBackground(Color.WHITE);
         l1 = new JLabel(" Espaço inicial:");
@@ -48,7 +45,17 @@ public class Classe8{
         pcentro.add(l3);
         pcentro.add(t3);
 
-        // Painel de conteudo da janela
+        // PAINEL DE BAIXO ===
+        //Criando um panel, setando a cor dele, criando e adicionando um label dentro do panel.
+        pbaixo = new JPanel();
+        pbaixo.setBackground(Color.YELLOW);
+        tempo = new JLabel("Tempo = 0");
+        pbaixo.add(tempo);
+
+
+
+        // CRIANDO UM CONTAINER OARA RECEBER OS PANELS
+        // CONTAINERS BORDERLAYOUT, CADA PANEL EM UMA DIRECAO.
         Container c = janela.getContentPane();
         c.add(pcima, BorderLayout.NORTH);
         c.add(pbaixo, BorderLayout.SOUTH);
@@ -57,10 +64,10 @@ public class Classe8{
         // Dimensionar e mostrar a janela
         janela.setSize(300,200);
         janela.setVisible(true);
-    }//fim construtor Exercicio
+    }
 
     public static void main(String[] args)
     {
         new Classe8();
     }
-}//fim class Exercicio 
+}

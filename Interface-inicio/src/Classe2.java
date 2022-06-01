@@ -6,16 +6,24 @@ import javax.swing.JLabel;
 
 
 public class Classe2 {
-    private JFrame janela;
 
-public Classe2(){
- janela = new JFrame("Janela com componentes");
-  janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ // ADICIONANDO VARIAVEIS ===
+
+    private JFrame janela;
+    private JLabel rotulo;
+    private JButton button;
+
+ //SETANDO AS VARIAVEIS DENTRO DE UM CONSTRUTOR ===
+  public Classe2(){
+  janela = new JFrame("Janela com componentes");
+   rotulo = new JLabel("Elemento Jlabel");
+   button = new JButton ("Botãozinho");
+   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+ // CRIANDO CONTAINER PARA BOTAR OS ITENS ===
   Container cont = janela.getContentPane();
-  JLabel rotulo = new JLabel("Elemento Jlabel");
-  JButton button = new JButton ("Botãozinho");
-       
-  cont.setLayout(new FlowLayout());
+
+  cont.setLayout(new FlowLayout()); //FLOWLAYOUT ORGANIZA OS ITENS UM POR UM NA HORIZONTAL
   cont.add(button);
   cont.add(rotulo);
   janela.setSize(500,200);

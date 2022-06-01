@@ -14,7 +14,9 @@ public class Classe5 {
 public Classe5(){
  janela = new JFrame("Janela com Gridlayout");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-  
+
+ //SETANDO AS VARIAVEIS DENTRO DE UM CONSTRUTOR ===
+
   JButton btn1 = new JButton("A");
   JButton btn2 = new JButton("B");
   JButton btn3 = new JButton("C");
@@ -31,6 +33,8 @@ public Classe5(){
 
   Container cont = janela.getContentPane();
   cont.setLayout(new GridLayout(2,6));  //GRID LAYOUT DEFINE OS ITENS EM LINHAS E COLUNAS
+
+ // ADICIONANDO ITENS NO CONTAINER ===
   
   cont.add(btn1);
   cont.add(btn2);

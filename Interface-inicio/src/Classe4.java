@@ -13,7 +13,7 @@ public class Classe4 {
     private JFrame janela;
 
 public Classe4(){
- janela = new JFrame("Janela com Flowlayout");
+  janela = new JFrame("Janela com Flowlayout");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   
   JButton btn1 = new JButton("Botão 1");
@@ -30,7 +30,7 @@ public Classe4(){
   
   
  
-  janela.setSize(500,400);
+  janela.setSize(500,100);
   janela.setVisible(true);
   
 }

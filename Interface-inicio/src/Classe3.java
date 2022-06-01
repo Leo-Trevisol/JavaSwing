@@ -36,7 +36,7 @@ public Classe3(){
   JButton btn4 = new JButton ("Botão CENTRO");
 
 
-  // SENTANDO A COR DOS PAINEIS ===
+  // SETANDO A COR DOS PAINEIS ===
 
   p1.setBackground(Color.green);
   p2.setBackground(Color.white);
