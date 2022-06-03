@@ -31,10 +31,13 @@ public class Classe10_CadastroCliente extends JFrame{
     ImageIcon icone, icone1, icone2, icone3, icone4, icone5; //IMAGEICON: IMAGEM/ICONE
 
     public Classe10_CadastroCliente(){
+
+        //ADICIONANDO COMPONENTES NO CONSTRUTOR ===
+
         super("Cadastro de Cliente");
         icone = new ImageIcon("look-for1.png");
         setIconImage(icone.getImage());
-        setSize(300, 150);
+        setSize(300, 200);
         setVisible(true);
 
         Container tela = getContentPane();
@@ -62,6 +65,9 @@ public class Classe10_CadastroCliente extends JFrame{
         texto8 = new JTextField(50);
         texto9 = new JTextField(50);
 
+        // CRIANDO MASCARAS DE FORMATACAO PARA OS CAMPOS
+        // DE CELULAR, TELEFONE, DATA DE NASCIMENTO E CADASTRO ===
+
         try{
             mascaracel = new MaskFormatter("(##)#####-####");
             mascaratel = new MaskFormatter("(##)####-####");
@@ -79,6 +85,9 @@ public class Classe10_CadastroCliente extends JFrame{
         tel = new JFormattedTextField(mascaratel);
         datan = new JFormattedTextField(mascaradatan);
         datac = new JFormattedTextField(mascaradatac);
+
+
+        //SETANDO OS CAMPOS E ADICIONANDO NO CONTAINER/TELA ===
 
         lista = new JComboBox(estados);
         lista.setMaximumRowCount(5);
@@ -103,20 +112,18 @@ public class Classe10_CadastroCliente extends JFrame{
 
         icone3 = new ImageIcon("look-for1.png");
         botaos = new JButton(" Sair", icone3);
-        botaos.setBounds(360, 500, 160, 25);
+        botaos.setBounds(20, 560, 160, 25);
         tela.add(botaos);
-
-        icone4 = new ImageIcon("look-for1.png");
-        botaoc = new JButton(" Consultar", icone4);
-        botaoc.setBounds(20, 530, 160, 25);
-
-        //Metodo que trata o evento (Ação) de fechar o sistema
+        // METODO QUE FECHA O SISTEMA ===
         botaos.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 System.exit(0);
             }
         });
 
+        icone4 = new ImageIcon("look-for1.png");
+        botaoc = new JButton(" Consultar", icone4);
+        botaoc.setBounds(20, 530, 160, 25);
         tela.add(botaoc);
 
         icone5 = new ImageIcon("look-for1.png");
@@ -182,7 +189,7 @@ public class Classe10_CadastroCliente extends JFrame{
         tela.add(botao2);
 
         texto1.requestFocus();
-        setSize(550,620);
+        setSize(400,650);
         setVisible(true);
         setLocationRelativeTo(null);
     }

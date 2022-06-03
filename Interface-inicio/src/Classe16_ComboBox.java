@@ -68,6 +68,7 @@ public  class Classe16_ComboBox extends JFrame implements ActionListener, ItemLi
 
     @Override
     public void itemStateChanged(ItemEvent e) {
+
         l.setText(x.getActionCommand() + " Select.");
     }
 
@@ -75,6 +76,7 @@ public  class Classe16_ComboBox extends JFrame implements ActionListener, ItemLi
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         ll.setText(x.getSelectedItem() + " Selected.");
     }
 

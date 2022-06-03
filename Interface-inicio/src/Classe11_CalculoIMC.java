@@ -16,7 +16,6 @@ public class Classe11_CalculoIMC extends JFrame{
         tela.setBackground(Color.BLACK);
 
         titulo1 = new JLabel("Cálculo de IMC");
-
         rotulo1 = new JLabel("Peso:");
         rotulo2 = new JLabel("Altura (m):");
         rotulo3 = new JLabel("IMC:");
@@ -34,11 +33,15 @@ public class Classe11_CalculoIMC extends JFrame{
         rotulo3.setBounds(170, 210, 100, 25);
         exibir.setBounds(180, 250, 200, 25);
 
+        //MUDANDO A COR DOS JLABEL ===
+
         titulo1.setForeground(Color.LIGHT_GRAY);
-        rotulo1.setForeground(Color.WHITE);
+        rotulo1.setForeground(Color.white);
         rotulo2.setForeground(Color.WHITE);
         rotulo3.setForeground(Color.WHITE);
         exibir.setForeground(Color.WHITE);
+
+        //MUDANDO A FONTE ===
 
         titulo1.setFont(new Font("Arial",Font.BOLD,18));
         exibir.setFont(new Font("Times New Roman",Font.BOLD,14));
@@ -49,6 +52,8 @@ public class Classe11_CalculoIMC extends JFrame{
         texto1.setBounds(200, 70, 100, 25);
         texto2.setBounds(200, 110, 100, 25);
         texto3.setBounds(200, 210, 100, 25);
+
+        //METODO QUE CALCULA O IMC ===
 
         calcular.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -72,6 +77,8 @@ public class Classe11_CalculoIMC extends JFrame{
                 }
             }
         });
+
+        //ADICIONANDO OS ITENS NA TELA ===
 
         tela.add(titulo1);
         tela.add(rotulo1);

@@ -47,26 +47,29 @@ public class Classe14_Triangulo extends JFrame{
         cont.add(verifica);
 
         tipo.setVisible(false);
-        tipo.setBounds(200,50,100,20);
+        tipo.setBounds(200,50,200,20);
+        cont.add(tipo);
 
         verifica.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                tipo.setText("");
+
                 String l1,l2,l3;
                 int conta = 0;
-                l1 = text1.getText().toString();
-                l2 = text1.getText().toString();
-                l3 = text1.getText().toString();
-
+                l1 = text1.getText().trim();
+                l2 = text2.getText().trim();
+                l3 = text3.getText().trim();
+                String nome = null;
 
 
                 if (l1 == l2 && l1 == l3 && l2 == l3){
 
-                    tipo = new JLabel("Triangulo Equilatero");
+                    nome = "Triangulo Equilatero";
                 }
                 if(l1 != l2 && l1 != l3 && l2 != l3 ){
-                    tipo = new JLabel("Triangulo Escaleno");
+                    nome ="Triangulo Escaleno";
                 }
                 if (l1==l2){
                     conta++;
@@ -78,10 +81,14 @@ public class Classe14_Triangulo extends JFrame{
                     conta++;
                 }
                 if (conta==2){
-                    tipo = new JLabel("Triangulo Isosceles");
+                    nome = "Triangulo Isosceles";
                 }
-                cont.setVisible(true);
-                cont.add(tipo);
+
+                tipo.setText(nome);
+                tipo.setVisible(true);
+
+
+
 
 
 

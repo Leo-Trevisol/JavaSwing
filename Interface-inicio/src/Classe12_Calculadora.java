@@ -16,7 +16,7 @@ public class Classe12_Calculadora extends JFrame{
         setLayout(null);
         cont.setBackground(Color.GRAY);
 
-
+        //SETANDO OS ITENS E BOTANDO ELES NA TELA ===
 
         num1 = new JLabel("Numero 1:");
         num1.setBounds(100,20,120,20);
@@ -54,6 +54,10 @@ public class Classe12_Calculadora extends JFrame{
         cont.add(multi);
         cont.add(divi);
 
+        //METODOS PARA FAZER OS CALCULOS ===
+
+        //METODO DE SOMA==
+
         soma.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 int nume1, nume2, somas;
@@ -68,6 +72,8 @@ public class Classe12_Calculadora extends JFrame{
             }
 
         });
+
+        //METODO DE SUBTRACAO==
 
         sub.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -84,6 +90,8 @@ public class Classe12_Calculadora extends JFrame{
 
         });
 
+        //METODO DE MULTIPLICACAO==
+
         multi.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 int nume1, nume2, multip;
@@ -99,6 +107,8 @@ public class Classe12_Calculadora extends JFrame{
 
         });
 
+        //METODO DE DIVISAO==
+
         divi.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 int nume1, nume2, divid;
@@ -113,10 +123,6 @@ public class Classe12_Calculadora extends JFrame{
             }
 
         });
-
-
-
-
 
 
         setSize(500,250);
