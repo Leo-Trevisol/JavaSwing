@@ -19,6 +19,9 @@ import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
 public class Classe25_Cadastro extends JFrame {
+
+    //CRIANDO VARIAVEIS===
+
     JFrame frame;
     JLabel nome,email,sexo,ddd1,ddd2,telefone,celular,endereco,num,complemento,
             bairro,cep,cidade,estado,rg,CPF,nascimento;
@@ -26,15 +29,18 @@ public class Classe25_Cadastro extends JFrame {
             txtbairro,txtcidade,txtestado,txtrg,txtCPF;
     JButton abrir,gravar,limpar;
     Container tela;
-    JFormattedTextField txtcelular, txttelefone, txtnascimento, txtcep;
-    JComboBox lista;
-    JRadioButton masc, femi,outro;
-    ButtonGroup sex;
-    PrintWriter out;
+    JFormattedTextField txtcelular, txttelefone, txtnascimento, txtcep; // CRIANDO MASCARAS
     MaskFormatter mascaracel, mascaratel,mascaradatan, mascaracep;
+    JComboBox lista; //COMBOBOX VAI RECEBER OS ESTADOS
+    JRadioButton masc, femi,outro;
+    ButtonGroup sex; // BUTTONGROUP AGRUPA OS RADIOBUTTON
+    PrintWriter out; // ELEMENTO PARA SALVAR O FORMULARIO
+
     String[] estados ={"Rio de Janeiro","S�o Paulo","Acre",
             "Santa Catarina","Rio Grande do Sul",
             "Bahia","Bras�lia"};
+
+    //CONSTRUTOR PUXANDO OS METODOS ===
 
     public Classe25_Cadastro(){
 
@@ -65,6 +71,8 @@ public class Classe25_Cadastro extends JFrame {
 
 
     }
+
+    // METODO PARA SETAR VARIAVIES===
 
     public void inserircomponentes() throws FileNotFoundException{
 
@@ -133,11 +141,13 @@ public class Classe25_Cadastro extends JFrame {
 
     }
 
+    //METODO PARA DEFINIR E INSERIR OS ITENS NA TELA ===
+
     public void inserirnatela(){
 
         Font font = new Font("Arial", Font.BOLD, 12);
 
-        Container tela = getContentPane();
+        tela = getContentPane();
         setLayout(null);
 
         nome.setBounds(40,10,50,20);
@@ -246,7 +256,11 @@ public class Classe25_Cadastro extends JFrame {
 
     }
 
+    // METODO COM AS ACOES DO BOTAO ===
+
     public void botoes() {
+
+        //METODO DO BOTAO LIMPAR ===
 
         limpar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
@@ -271,6 +285,8 @@ public class Classe25_Cadastro extends JFrame {
 
         });
 
+        //METODO DO BOTAO GRAVAR ===
+
         gravar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 
@@ -278,8 +294,6 @@ public class Classe25_Cadastro extends JFrame {
 
 
                     JOptionPane.showMessageDialog(null, "Digite o cep");
-
-
 
                 }else {
 
