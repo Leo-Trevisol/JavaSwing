@@ -32,7 +32,7 @@ public class Classe25_Cadastro extends JFrame {
     ButtonGroup sex;
     PrintWriter out;
     MaskFormatter mascaracel, mascaratel,mascaradatan, mascaracep;
-    String estados[]={"Rio de Janeiro","S�o Paulo","Acre",
+    String[] estados ={"Rio de Janeiro","S�o Paulo","Acre",
             "Santa Catarina","Rio Grande do Sul",
             "Bahia","Bras�lia"};
 
@@ -47,8 +47,12 @@ public class Classe25_Cadastro extends JFrame {
         }
         inserirnatela();
         botoes();
-        setSize(1050,300);
+        setSize(1000,300);
+        setResizable(false);
+        setLocationRelativeTo(null);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
     }
 
@@ -150,13 +154,13 @@ public class Classe25_Cadastro extends JFrame {
         sexo.setBounds(40,45,50,20);
         tela.add(sexo);
 
-        masc.setBounds(120, 45, 100, 20);
+        masc.setBounds(80, 45, 90, 20);
         tela.add(masc);
 
-        femi.setBounds(230, 45, 100, 20);
+        femi.setBounds(170, 45, 90, 20);
         tela.add(femi);
 
-        outro.setBounds(340, 45, 100, 20);
+        outro.setBounds(260, 45, 90, 20);
         tela.add(outro);
 
         ddd1.setBounds(400,45,50,20);
@@ -166,7 +170,7 @@ public class Classe25_Cadastro extends JFrame {
 
         telefone.setBounds(480,45,60,20);
         tela.add(telefone);
-        txttelefone.setBounds(540,45,90,20);
+        txttelefone.setBounds(540,45,80,20);
         tela.add(txttelefone);
 
         ddd2.setBounds(650,45,50,20);
@@ -176,7 +180,7 @@ public class Classe25_Cadastro extends JFrame {
 
         celular.setBounds(730,45,60,20);
         tela.add(celular);
-        txtcelular.setBounds(780,45,95,20);
+        txtcelular.setBounds(780,45,80,20);
         tela.add(txtcelular);
 
         endereco.setBounds(40,80,70,20);
@@ -214,33 +218,31 @@ public class Classe25_Cadastro extends JFrame {
         lista.setBounds(650,150,300,20);
         tela.add(lista);
 
-        rg.setBounds(340,185,30,20);
+        rg.setBounds(240,185,30,20);
         tela.add(rg);
-        txtrg.setBounds(365,185,100,20);
+        txtrg.setBounds(265,185,100,20);
         tela.add(txtrg);
 
-        CPF.setBounds(475,185,30,20);
+        CPF.setBounds(375,185,30,20);
         tela.add(CPF);
-        txtCPF.setBounds(505,185,100,20);
+        txtCPF.setBounds(405,185,100,20);
         tela.add(txtCPF);
 
-        nascimento.setBounds(620,185,130,20);
+        nascimento.setBounds(520,185,130,20);
         tela.add(nascimento);
-        txtnascimento.setBounds(740,185,70,20);
+        txtnascimento.setBounds(640,185,70,20);
         tela.add(txtnascimento);
 
-        abrir.setBounds(420,220,80,30);
+        abrir.setBounds(325,220,80,30);
         tela.add(abrir);
-        gravar.setBounds(520,220,80,30);
+        gravar.setBounds(425,220,80,30);
         tela.add(gravar);
-        limpar.setBounds(620,220,80,30);
+        limpar.setBounds(525,220,80,30);
         tela.add(limpar);
 
         sex.add(masc);
         sex.add(femi);
         sex.add(outro);
-
-
 
     }
 
@@ -272,18 +274,20 @@ public class Classe25_Cadastro extends JFrame {
         gravar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 
+                if(txtcep.getText().isEmpty() || txtcep.getText().equals("")) {
+
+
+                    JOptionPane.showMessageDialog(null, "Digite o cep");
+
+
+
+                }else {
+
                 try {
 
                     out = new PrintWriter("Formulario " + txtcep.getText() + ".txt");
 
-                    if(txtcep.getText().isEmpty() || txtcep == null) {
 
-
-                        JOptionPane.showMessageDialog(null, "Digite o cep");
-
-
-
-                    }else {
 
                         out.println(txtnome.getText());
                         out.println(txtemail.getText());
@@ -305,14 +309,16 @@ public class Classe25_Cadastro extends JFrame {
 
                         JOptionPane.showMessageDialog(null, "O FORMULARIO FOI REGISTRADO");
 
-                    }
+                    } catch (FileNotFoundException ex) {
+                    ex.printStackTrace();
+                }
 
-                }catch(Exception er) { JOptionPane.showMessageDialog(null, er);}
 
             }
 
-        });
+        }
 
-    }
+    });
 }
 
+}
