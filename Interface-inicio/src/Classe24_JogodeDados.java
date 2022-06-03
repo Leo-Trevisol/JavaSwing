@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class Classe24_JogodeDados extends JFrame implements ActionListener {
+public class Classe24_JogodeDados extends JFrame  {
 
     //ADICIONANDO VARIAVEIS
 
@@ -35,7 +35,7 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
             jogardados.setToolTipText("Play");
             //Transforma o mouse em mão
             jogardados.setCursor(new Cursor(Cursor.HAND_CURSOR));
-            jogardados.addActionListener(this);
+          //  jogardados.addActionListener(this);
         }
         return jogardados;
     }
