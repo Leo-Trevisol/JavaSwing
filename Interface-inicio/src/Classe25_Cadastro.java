@@ -3,8 +3,7 @@ import java.awt.Container;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.text.ParseException;
 
 import javax.swing.ButtonGroup;
@@ -290,16 +289,23 @@ public class Classe25_Cadastro extends JFrame {
         gravar.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
 
-                if(txtcep.getText().isEmpty() || txtcep.getText().equals("")) {
+                if (txtCPF.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null,"Preencha o CPF!");
+                    txtCPF.requestFocus();
 
+                } else if (txtnome.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null,"Preencha o nome!");
+                    txtnome.requestFocus();
 
-                    JOptionPane.showMessageDialog(null, "Digite o cep");
+                } else if (txtnascimento.getText().equals("")) {
+                    JOptionPane.showMessageDialog(null, "Preencha a Data de Nascimento");
+                    txtnascimento.requestFocus();
 
-                }else {
+                } else {
 
-                try {
+                    try {
 
-                    out = new PrintWriter("Formulario " + txtcep.getText() + ".txt");
+                    out = new PrintWriter("Formulario " + txtCPF.getText() + ".txt");
 
 
 
@@ -333,6 +339,41 @@ public class Classe25_Cadastro extends JFrame {
         }
 
     });
+
+        abrir.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent arg0) {
+
+                try {
+                    String arquivo = JOptionPane.showInputDialog(null,"Infome o Cpf para abrir:");
+
+                    BufferedReader br = new BufferedReader(new FileReader("Formulario " + arquivo + ".txt"));
+
+
+                    txtnome.setText(br.readLine());
+                    txtemail.setText(br.readLine());
+                    txtddd1.setText(br.readLine());
+                    txttelefone.setText(br.readLine());
+                    txtddd2.setText(br.readLine());
+                    txtcelular.setText(br.readLine());
+                    txtendereco.setText(br.readLine());
+                    txtnum.setText(br.readLine());
+                    txtcomplemento.setText(br.readLine());
+                    txtbairro.setText(br.readLine());
+                    txtcep.setText(br.readLine());
+                    txtcidade.setText(br.readLine());
+                    txtestado.setText(br.readLine());
+                    txtrg.setText(br.readLine());
+                    txtCPF.setText(br.readLine());
+                    txtnascimento.setText(br.readLine());
+
+                } catch (IOException Erro) {
+                    JOptionPane.showMessageDialog(null,	Erro);
+
+                }
+            }
+        });
+
+
 }
 
 }
