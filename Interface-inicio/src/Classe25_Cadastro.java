@@ -305,6 +305,8 @@ public class Classe25_Cadastro extends JFrame {
 
                     try {
 
+                        //GRAVA OS DADOS NUM RELATORIO ===
+
                     out = new PrintWriter("Formulario " + txtCPF.getText() + ".txt");
 
 
@@ -340,13 +342,17 @@ public class Classe25_Cadastro extends JFrame {
 
     });
 
+        //METODO BOTAO ABRIR ===
+
         abrir.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
+            public void actionPerformed(ActionEvent a) {
 
                 try {
-                    String arquivo = JOptionPane.showInputDialog(null,"Infome o Cpf para abrir:");
+                    String cpf = JOptionPane.showInputDialog(null,"Infome o Cpf para abrir:");
 
-                    BufferedReader br = new BufferedReader(new FileReader("Formulario " + arquivo + ".txt"));
+                    //CLASSE QUE LE O TEXTO ARMAZENADO ===
+
+                    BufferedReader br = new BufferedReader(new FileReader("Formulario " + cpf + ".txt"));
 
 
                     txtnome.setText(br.readLine());
@@ -366,8 +372,8 @@ public class Classe25_Cadastro extends JFrame {
                     txtCPF.setText(br.readLine());
                     txtnascimento.setText(br.readLine());
 
-                } catch (IOException Erro) {
-                    JOptionPane.showMessageDialog(null,	Erro);
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(null,	e);
 
                 }
             }
