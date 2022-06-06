@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public  class Classe21_CadastroCurso extends JFrame {
+public  class Classe_21_CadastroCurso extends JFrame {
 
 
     private JLabel   	 lblTituloDados, lblTituloCurso, lblNome, lblCpf, lblSexo, lblDataNasc, lblEstadoCivil, lblEndereco, lblBairro, lblCidade, lblTelefone,lblNomeFeito, lblTurno, lblFezCurso, lblQuantFeito, lblAno, lblQualCurso;
@@ -23,7 +23,7 @@ public  class Classe21_CadastroCurso extends JFrame {
 
     public static void main(String args[]) {
 
-        JFrame frame = new Classe21_CadastroCurso();
+        JFrame frame = new Classe_21_CadastroCurso();
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
@@ -33,7 +33,7 @@ public  class Classe21_CadastroCurso extends JFrame {
         frame.setVisible(true);
     }
 
-    public Classe21_CadastroCurso() {
+    public Classe_21_CadastroCurso() {
 
         iniciarComponentes();
         layoutTela();

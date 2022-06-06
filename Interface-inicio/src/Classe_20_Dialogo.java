@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Classe20_Dialogo {
+public class Classe_20_Dialogo {
 
     public static void main(String args[]) {
 

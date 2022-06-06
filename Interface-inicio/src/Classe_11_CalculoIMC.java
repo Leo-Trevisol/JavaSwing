@@ -3,12 +3,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Classe11_CalculoIMC extends JFrame{
+public class Classe_11_CalculoIMC extends JFrame{
     JLabel rotulo1, rotulo2, rotulo3, titulo1, exibir;
     JTextField texto1, texto2, texto3;
     JButton calcular;
 
-    public Classe11_CalculoIMC(){
+    public Classe_11_CalculoIMC(){
         super("Cálculo de IMC");
 
         Container tela = getContentPane();
@@ -96,7 +96,7 @@ public class Classe11_CalculoIMC extends JFrame{
     }
 
     public static void main(String[] args) {
-        Classe11_CalculoIMC app = new Classe11_CalculoIMC();
+        Classe_11_CalculoIMC app = new Classe_11_CalculoIMC();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

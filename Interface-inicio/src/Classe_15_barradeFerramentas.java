@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 
 
-public class Classe15_barradeFerramentas extends JFrame{
+public class Classe_15_barradeFerramentas extends JFrame{
 
     static JToolBar tb;
 
@@ -40,7 +40,7 @@ public class Classe15_barradeFerramentas extends JFrame{
         j.setSize(500,500);
 
 
-        Classe15_barradeFerramentas app = new Classe15_barradeFerramentas();
+        Classe_15_barradeFerramentas app = new Classe_15_barradeFerramentas();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

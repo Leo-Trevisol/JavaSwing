@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.text.*;
 
-public class Classe10_CadastroCliente extends JFrame{
+public class Classe_10_CadastroCliente extends JFrame{
 
     //CRIANDO VARIAVIES===
 
@@ -30,7 +30,7 @@ public class Classe10_CadastroCliente extends JFrame{
 
     ImageIcon icone, icone1, icone2, icone3, icone4, icone5; //IMAGEICON: IMAGEM/ICONE
 
-    public Classe10_CadastroCliente(){
+    public Classe_10_CadastroCliente(){
 
         //ADICIONANDO COMPONENTES NO CONSTRUTOR ===
 
@@ -194,7 +194,7 @@ public class Classe10_CadastroCliente extends JFrame{
         setLocationRelativeTo(null);
     }
     public static void main(String[] args) {
-        Classe10_CadastroCliente app = new Classe10_CadastroCliente();
+        Classe_10_CadastroCliente app = new Classe_10_CadastroCliente();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

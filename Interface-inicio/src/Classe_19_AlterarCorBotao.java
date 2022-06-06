@@ -2,12 +2,12 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Classe19_AlterarCorBotao extends JFrame {
+public class Classe_19_AlterarCorBotao extends JFrame {
 
     private JButton botao_1;
     private JTextField caixa;
 
-    public Classe19_AlterarCorBotao() {
+    public Classe_19_AlterarCorBotao() {
 
         super("Formul�rio");
         this.setSize(400, 200);
@@ -37,7 +37,7 @@ public class Classe19_AlterarCorBotao extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Color bgColor = JColorChooser.showDialog(Classe19_AlterarCorBotao.this,
+                Color bgColor = JColorChooser.showDialog(Classe_19_AlterarCorBotao.this,
                         "Alternando a cor do botao", botao_1.getBackground());
 
                 if(bgColor != null) {
@@ -65,7 +65,7 @@ public class Classe19_AlterarCorBotao extends JFrame {
 
     public static void main(String args[]) {
 
-        new Classe19_AlterarCorBotao();
+        new Classe_19_AlterarCorBotao();
 
     }
 

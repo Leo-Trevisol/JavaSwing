@@ -3,14 +3,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Classe13_Pitagoras extends JFrame {
+public class Classe_13_Pitagoras extends JFrame {
 
     JLabel cateto1, cateto2, hipotenusa, teorema,formula;
     JTextField texto1, texto2, texto3;
     JButton calcular;
     ImageIcon icone1;
 
-    public Classe13_Pitagoras(){
+    public Classe_13_Pitagoras(){
         super("Teorema de Pitagoras");
 
         Container cont = getContentPane();
@@ -84,7 +84,7 @@ public class Classe13_Pitagoras extends JFrame {
     }
 
     public static void main(String[] args) {
-        Classe13_Pitagoras app = new Classe13_Pitagoras();
+        Classe_13_Pitagoras app = new Classe_13_Pitagoras();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

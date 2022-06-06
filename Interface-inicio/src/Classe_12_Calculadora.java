@@ -3,14 +3,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Classe12_Calculadora extends JFrame{
+public class Classe_12_Calculadora extends JFrame{
 
     JLabel num1, num2,result;
     JTextField text1, text2;
     JButton soma,sub,multi,divi;
 
 
-    public Classe12_Calculadora() {
+    public Classe_12_Calculadora() {
 
         Container cont = getContentPane();
         setLayout(null);
@@ -130,7 +130,7 @@ public class Classe12_Calculadora extends JFrame{
         setLocationRelativeTo(null);
     }
     public static void main(String[] args) {
-        Classe12_Calculadora app = new Classe12_Calculadora();
+        Classe_12_Calculadora app = new Classe_12_Calculadora();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

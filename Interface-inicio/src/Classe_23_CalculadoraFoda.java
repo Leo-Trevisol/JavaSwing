@@ -11,7 +11,7 @@ import javax.swing.SwingConstants;
 import operation.Operation;
 import javax.swing.JLabel;
 
-public class Classe23_CalculadoraFoda extends JFrame {
+public class Classe_23_CalculadoraFoda extends JFrame {
 
     // ADICIONANDO VARIAVEIS ===
 
@@ -50,7 +50,7 @@ public class Classe23_CalculadoraFoda extends JFrame {
 
     Operation operacao = new Operation(); // ESTANCIA A CLASSE OPERACAO, QUE E USADA PARA FAZER OS CALCULOS
 
-    Classe23_CalculadoraFoda() { // CONSTRUTOR DA CLASSE
+    Classe_23_CalculadoraFoda() { // CONSTRUTOR DA CLASSE
         preparaInterface();
         adicionaComponentes();
     }
@@ -510,7 +510,7 @@ public class Classe23_CalculadoraFoda extends JFrame {
     } //FIM DO METODO DE ADICIONAR COMPONENTES
 
     public static void main(String[] args) {
-        new Classe23_CalculadoraFoda();
+        new Classe_23_CalculadoraFoda();
 
     }
 

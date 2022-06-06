@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 
-public  class Classe16_ComboBox extends JFrame implements ActionListener, ItemListener{
+public  class Classe_16_ComboBox extends JFrame implements ActionListener, ItemListener{
 
     static JToolBar tb;
 
@@ -19,7 +19,7 @@ public  class Classe16_ComboBox extends JFrame implements ActionListener, ItemLi
 
     public static void main(String[] args) {
 
-        Classe16_ComboBox to = new Classe16_ComboBox();
+        Classe_16_ComboBox to = new Classe_16_ComboBox();
 
         l = new JLabel ("Nothing Selected");
         ll = new JLabel ("Nothung Selected");

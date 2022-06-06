@@ -17,7 +17,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.text.MaskFormatter;
 
-public class Classe25_Cadastro extends JFrame {
+public class Classe_25_Cadastro extends JFrame {
 
     //CRIANDO VARIAVEIS===
 
@@ -41,7 +41,7 @@ public class Classe25_Cadastro extends JFrame {
 
     //CONSTRUTOR PUXANDO OS METODOS ===
 
-    public Classe25_Cadastro(){
+    public Classe_25_Cadastro(){
 
 
         try {
@@ -64,7 +64,7 @@ public class Classe25_Cadastro extends JFrame {
 
     public static void main(String[] args) {
 
-        Classe25_Cadastro app = new Classe25_Cadastro();
+        Classe_25_Cadastro app = new Classe_25_Cadastro();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 

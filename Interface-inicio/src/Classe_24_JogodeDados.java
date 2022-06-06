@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
 import java.net.URL;
 import javax.swing.JLabel;
 
-public class Classe24_JogodeDados extends JFrame implements ActionListener {
+public class Classe_24_JogodeDados extends JFrame implements ActionListener {
 
     //    DECLARANDO VARIAVEIS ===;
     private JPanel painel = null;
@@ -73,14 +73,14 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                Classe24_JogodeDados app = new Classe24_JogodeDados();
+                Classe_24_JogodeDados app = new Classe_24_JogodeDados();
                 app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 app.setVisible(true);
             }
         });
     }
 
-    public Classe24_JogodeDados() {
+    public Classe_24_JogodeDados() {
         super();
         initialize();
     }

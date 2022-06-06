@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Classe22_EditordeTexto extends JFrame {
+public class Classe_22_EditordeTexto extends JFrame {
 
     private JTextArea textoEdit;
     private JButton verTexto;
@@ -10,7 +10,7 @@ public class Classe22_EditordeTexto extends JFrame {
 
     public String enderecoURL;
 
-    public Classe22_EditordeTexto() {
+    public Classe_22_EditordeTexto() {
 
         super("JEditorPane");
         this.setSize(510,500);
@@ -74,6 +74,6 @@ public class Classe22_EditordeTexto extends JFrame {
 
     }
     public static void main(String[] args) {
-        new Classe22_EditordeTexto();
+        new Classe_22_EditordeTexto();
     }
 }

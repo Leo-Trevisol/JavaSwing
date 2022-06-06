@@ -1,7 +1,7 @@
 
 import javax.swing.*;
 
-public class Classe17_Menu extends JFrame {
+public class Classe_17_Menu extends JFrame {
 
     static JMenuBar mb;
 
@@ -34,7 +34,7 @@ public class Classe17_Menu extends JFrame {
         f.setSize(500,500);
         f.setVisible(true);
 
-        Classe17_Menu app = new Classe17_Menu();
+        Classe_17_Menu app = new Classe_17_Menu();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
