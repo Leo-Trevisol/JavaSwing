@@ -43,7 +43,7 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
 
     private JButton buttoninformacao() {
         if (botaoInfo == null) {
-            ImageIcon icone = new ImageIcon(getClass().getResource("/imagens/Informacao.png"));
+            ImageIcon icone = new ImageIcon(getClass().getResource("/dados1/Informacao.png"));
             botaoInfo = new JButton(icone);
             botaoInfo.setBounds(new Rectangle(530, 5, 40, 40));
             botaoInfo.setToolTipText("Informações"); //MENSAGEM AO PASSAR O MOUSE
@@ -58,7 +58,7 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
                         public void actionPerformed(java.awt.event.ActionEvent e) {
 
                             // BOTANDO IMAGEM DENTRO DA CAIXA DE AVISO/JOPTIONPANE ===
-                            Icon duke = new ImageIcon(getClass().getResource("/imagens/Duke.png"));
+                            Icon duke = new ImageIcon(getClass().getResource("/dados1/Duke.png"));
                             //MENSAGEM AO CLICAR NO BOTAO INFO ===
                             JOptionPane.showMessageDialog(null, "Jogo de dados em java.\n"
                                             + "Autor: Leo Trevisol"
@@ -93,7 +93,7 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
         this.setTitle("Jogo de Dados Java");
         this.setResizable(false);   // TAMANHO FIXO DA TELA
         this.setLocationRelativeTo(null);   // DEIXA A TELA CENTRALIZADA NO MONITOR
-        URL url = this.getClass().getResource("/imagens/Duke.png"); // URL DA IMAGEM 16X16
+        URL url = this.getClass().getResource("/dados1/Duke.png"); // URL DA IMAGEM 16X16
         this.setIconImage(Toolkit.getDefaultToolkit().getImage(url)); // PASSANDO URL COMO PARAMETRO
     }
 
@@ -162,32 +162,32 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
 
         if (dadoum == 1) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-1.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-1.png"))));
             dado1.setToolTipText("Nº1"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadoum == 2) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-2.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-2.png"))));
             dado1.setToolTipText("Nº2"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadoum == 3) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-3.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-3.png"))));
             dado1.setToolTipText("Nº3"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadoum == 4) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-4.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-4.png"))));
             dado1.setToolTipText("Nº4"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadoum == 5) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-5.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-5.png"))));
             dado1.setToolTipText("Nº5"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadoum == 6) {
 
-            dado1.setIcon(new ImageIcon(getClass().getResource(("dice-6.png"))));
+            dado1.setIcon(new ImageIcon(getClass().getResource(("/dados1/dice-6.png"))));
             dado1.setToolTipText("Nº6"); //MENSAGEM AO PASSAR O MOUSE
         }
 
@@ -200,32 +200,32 @@ public class Classe24_JogodeDados extends JFrame implements ActionListener {
         // Dados verde DENTRO do pacote imagens
         if (dadodois == 1) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-1.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-1.png"))));
             dado2.setToolTipText("Nº1"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadodois == 2) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-2.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-2.png"))));
             dado2.setToolTipText("Nº2"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadodois == 3) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-3.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-3.png"))));
             dado2.setToolTipText("Nº3"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadodois == 4) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-4.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-4.png"))));
             dado2.setToolTipText("Nº4"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadodois == 5) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-5.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-5.png"))));
             dado2.setToolTipText("Nº5"); //MENSAGEM AO PASSAR O MOUSE
 
         } else if (dadodois == 6) {
 
-            dado2.setIcon(new ImageIcon(getClass().getResource(("/imagens/dice-6.png"))));
+            dado2.setIcon(new ImageIcon(getClass().getResource(("/dados2/dice-6.png"))));
             dado2.setToolTipText("Nº6"); //MENSAGEM AO PASSAR O MOUSE
         }
 

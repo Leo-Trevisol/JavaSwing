@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-public class Classe {
+public class Classe1 {
 
     // ADICIONANDO VARIAVEIS ===
 
@@ -7,7 +7,7 @@ public class Classe {
 
     //SETANDO AS VARIAVEIS DENTRO DE UM CONSTRUTOR ===
 
-public Classe(){
+public Classe1(){
   janela = new JFrame("Primeira janela");
   janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -19,6 +19,6 @@ public Classe(){
 }
 
 public static void main(String[] args){
-new Classe();
+new Classe1();
 }
 }
