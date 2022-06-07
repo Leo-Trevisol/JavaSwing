@@ -1,12 +1,16 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Classe_26_JogodaVelha extends JFrame {
 
     JLabel placar, xis, bola;
     JButton novojogo, zerar, botaoInfo;
     JButton[] botoes = new JButton[9];
-    boolean [] click = new boolean[9];
+    JButton a,b,c,d,e,f,g,h,i;
+    JPanel painel;
+  //  boolean [] click = new boolean[9];
     boolean xo = false;
     int ptx = 0;
     int pto = 0;
@@ -16,6 +20,10 @@ public class Classe_26_JogodaVelha extends JFrame {
 
         setar();
         inserir();
+        zerartudo();
+        marcar();
+       // botao();
+
 
         //SETANDO PROPRIEDADES DA TELA
 
@@ -48,6 +56,18 @@ public class Classe_26_JogodaVelha extends JFrame {
         novojogo = new JButton("NOVO JOGO");
         zerar = new JButton("ZERAR PLACAR");
 
+        painel = new JPanel();
+
+        a = new JButton();
+        b = new JButton();
+        c = new JButton();
+        d = new JButton();
+        e = new JButton();
+        f = new JButton();
+        g = new JButton();
+        h = new JButton();
+        i = new JButton();
+
     }
 
     //METODO INSERINDO OS ITENS NO CONTAINER ===
@@ -71,7 +91,27 @@ public class Classe_26_JogodaVelha extends JFrame {
         tela.add(zerar);
 
         tela.add(buttoninformacao());
+
+        // CRIANDO PAINEL COMO GRID LAYOUT 3X3 PARA BOTAR OS BOTOES ===
+
+        painel.setLayout(new GridLayout(3,3));
+        painel.setBounds(20,20,300,300);
+        painel.setBackground(Color.BLACK);
+        painel.add(a);
+        painel.add(b);
+        painel.add(c);
+        painel.add(d);
+        painel.add(e);
+        painel.add(f);
+        painel.add(g);
+        painel.add(h);
+        painel.add(i);
+        tela.add(painel);
+
+
     }
+
+    //CRIACAO BUTTON DE INFORMACAO ===
 
     private JButton buttoninformacao() {
         if (botaoInfo == null) {
@@ -102,5 +142,83 @@ public class Classe_26_JogodaVelha extends JFrame {
         return botaoInfo;
     }
 
+    //METODO GERAR AS 9 CASAS ===
+
+    public void botao(){
+        for (int i=0; i==9;i++){
+            botoes [i] = new JButton();
+      //      painel.add(botoes[i]);
+
+        }
+    }
+
+    //METODO ZERAR O PLACAR ===
+
+    public void zerartudo(){
+        zerar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                xis.setText("X= 0");
+                bola.setText("O= 0");
+            }
+        });
+    }
+
+    //METODO X E O ===
+
+    public void marcar(){
+        a.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (xo) {
+                    a.setText("X");
+                    xo = false;
+
+                }
+                else if{
+                    a.setText("O");
+                    xo = true;
+                }
+            }
+
+
+        });
+
+
+        b.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (xo) {
+                    b.setText("X");
+
+                } else
+                    b.setText("O");
+
+            }
+
+        });
+
+        c.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                if (xo) {
+                    c.setText("X");
+
+                } else
+                    c.setText("O");
+
+            }
+
+
+
+        });
+
+
+    }
+
 
 }
+
