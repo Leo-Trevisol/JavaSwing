@@ -23,6 +23,7 @@ public class Classe_14_Triangulo extends JFrame{
         text1 = new JTextField();
         text2 = new JTextField();
         text3 = new JTextField();
+        String l1,l2,l3;
 
 
         exp.setBounds(10,10,400,20);
@@ -50,57 +51,25 @@ public class Classe_14_Triangulo extends JFrame{
         tipo.setBounds(200,50,200,20);
         cont.add(tipo);
 
-        verifica.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        l1 =text1.getText().trim();
+        l2 =text2.getText().trim();
+        l3 =text3.getText().trim();
 
-                tipo.setText("");
-
-                String l1,l2,l3;
-                int conta = 0;
-                l1 = text1.getText().trim();
-                l2 = text2.getText().trim();
-                l3 = text3.getText().trim();
-                String nome = null;
-
-
-                if (l1 == l2 && l1 == l3 && l2 == l3){
-
-                    nome = "Triangulo Equilatero";
-                }
-                if(l1 != l2 && l1 != l3 && l2 != l3 ){
-                    nome ="Triangulo Escaleno";
-                }
-                if (l1==l2){
-                    conta++;
-                }
-                if(l1==l3){
-                    conta++;
-                }
-                if (l2==l3){
-                    conta++;
-                }
-                if (conta==2){
-                    nome = "Triangulo Isosceles";
-                }
-
-                tipo.setText(nome);
-                tipo.setVisible(true);
-
-
-
-
-
-
-            }
-
-        });
+        tipo.setText(l1);
 
         setSize(400,300);
         setVisible(true);
 
+        verifica.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tipo.setVisible(true);
+            }
+        });
+
 
     }
+
 
 
 

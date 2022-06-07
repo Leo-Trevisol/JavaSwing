@@ -10,6 +10,8 @@ public class Classe_13_Pitagoras extends JFrame {
     JButton calcular;
     ImageIcon icone1;
 
+    //SETANDO E ADICIONANDO VARIAVEIS NO CONTAINER ===
+
     public Classe_13_Pitagoras(){
         super("Teorema de Pitagoras");
 
@@ -23,9 +25,9 @@ public class Classe_13_Pitagoras extends JFrame {
         teorema = new JLabel ("Teorema de Pitagoras");
         formula = new JLabel ("C2 = A2 + B2");
 
-        texto1 = new JTextField (5);
-        texto2 = new JTextField (5);
-        texto3 = new JTextField (5);
+        texto1 = new JTextField ();
+        texto2 = new JTextField ();
+        texto3 = new JTextField ();
 
 
         icone1 = new ImageIcon("raiz.png");
@@ -61,6 +63,8 @@ public class Classe_13_Pitagoras extends JFrame {
         hipotenusa.setFont(new Font("Serif", Font.BOLD, 14));
         texto3.setBounds(260,190,120,20);
         cont.add(texto3);
+
+        //METODO BOTAO CALCULAR HIPOTENUSA===
 
         calcular.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
