@@ -7,19 +7,18 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
 
     JLabel placar, xis, bola;
     JButton novojogo, zerar, botaoInfo;
-
     JButton a, b, c, d, e, f, g, h, i;
-    JButton[] botoes = new JButton[9];
     JPanel painel;
-    boolean [] click = new boolean[9];
     boolean xo = false;
+    boolean conf = true;
     int ptx = 0;
     int pto = 0;
     Container tela;
 
+    // CONSTRUTOR PUXANDO OS METODOS ===
+
     public Classe_26_MeuJogodaVelha() {
 
-        botao();
         setar();
         inserir();
         zerartudo();
@@ -36,14 +35,6 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         this.setResizable(false);// NAO E POSSIVEL REDIMENSIONAR A TELA
         this.setLocationRelativeTo(null); // CRIA A TELA NO CENTRO DO MONITOR
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
-    }
-
-    public static void main(String[] args) {
-
-        new Classe_26_MeuJogodaVelha();
-
     }
 
     //SETANDO COMPONENTES ===
@@ -96,8 +87,6 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
 
         // CRIANDO PAINEL COMO GRID LAYOUT 3X3 PARA BOTAR OS BOTOES ===
 
-        botao();
-
         painel.setLayout(new GridLayout(3, 3));
         painel.setBounds(20, 20, 300, 300);
         painel.setBackground(Color.BLACK);
@@ -111,28 +100,16 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         painel.add(h);
         painel.add(i);
         tela.add(painel);
-
-
-    }
-
-
-    //METODO GERAR AS 9 CASAS ===
-
-    public void botao() {
-        for (int i = 0; i == 9; i++) {
-            botoes[i] = new JButton();
-
-
-        }
     }
 
     // METODO NOVO JOGO ===
-
 
     public void newgame() {
         novojogo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent u) {
+                xo = false;
+                conf = true;
                 a.setText("");
                 b.setText("");
                 c.setText("");
@@ -142,8 +119,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                 g.setText("");
                 h.setText("");
                 i.setText("");
-
-
+                verificarx();
             }
         });
     }
@@ -154,6 +130,8 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         zerar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                ptx = 0;
+                pto = 0;
                 xis.setText("X= 0");
                 bola.setText("O= 0");
             }
@@ -166,21 +144,18 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         a.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(a);
             }
         });
         b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(b);
             }
         });
         c.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(c);
             }
         });
@@ -188,7 +163,6 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         d.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(d);
             }
         });
@@ -196,28 +170,24 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent u) {
-                verificarx();
                 verificatudo(e);
             }
         });
         f.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(f);
             }
         });
         g.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
                 verificatudo(g);
             }
         });
         h.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent u) {
-                verificarx();
                 verificatudo(h);
             }
         });
@@ -225,11 +195,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         i.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                verificarx();
-
                 verificatudo(i);
-
-
             }
         });
     }
@@ -237,22 +203,36 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
     //METODO QUE VERIFICA SE A CASA JA FOI PREENCHIDA ===
 
     public void verificatudo(JButton x) {
+        if (conf){
+
         if (xo) {
-            if (x.getText().isEmpty()) {
-                x.setText("O");
-                xo = false;
+                if (x.getText().isEmpty()) {
+                    x.setText("O");
+                    xo = false;
+                    verificarx();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
+
+                }
+
             } else {
-                JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
+                if (x.getText().isEmpty()) {
+                    x.setText("X");
+                    xo = true;
+                    verificarx();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
+                }
             }
-        } else {
-            if (x.getText().isEmpty()) {
-                x.setText("X");
-                xo = true;
-            } else {
-                JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
-            }
+
+        }else{
+            JOptionPane.showMessageDialog(null, "O JOGO ACABOU.\n"
+            + "CLIQUE EM NOVO JOGO PARA\n"
+            + "JOGAR NOVAMENTE!!");
+
         }
     }
+
 
     //METODO DE VERIFICAR SE ALGUEM GANHOU OU SE DEU VELHA ===
 
@@ -282,11 +262,13 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                 JOptionPane.showMessageDialog(null, "ACABOU! = X VENCEU");
                 ptx++;
                 xis.setText("X= " + ptx);
+                conf = false;
 
             } else {
                 JOptionPane.showMessageDialog(null, "ACABOU! = O VENCEU");
                 pto++;
                 bola.setText("O= " + pto);
+                conf = false;
             }
 
         }
@@ -299,7 +281,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             ImageIcon icone = new ImageIcon(getClass().getResource("/dados1/Informacao.png"));
             botaoInfo = new JButton(icone);
             botaoInfo.setBounds(new Rectangle(550, 5, 40, 40));
-            botaoInfo.setToolTipText("Informa��es"); //MENSAGEM AO PASSAR O MOUSE
+            botaoInfo.setToolTipText("Informacoes"); //MENSAGEM AO PASSAR O MOUSE
             botaoInfo.setContentAreaFilled(false); // TIRA O FUNDO DO BOTAO
             botaoInfo.setBorderPainted(false);  // TIRA A BORDA DO BOTAO
             botaoInfo.setFocusable(false);  // TIRA O FOCUS DO BOTAO
@@ -315,12 +297,17 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                     //MENSAGEM AO CLICAR NO BOTAO INFO ===
                     JOptionPane.showMessageDialog(null, "Jogo da velha em java.\n"
                                     + "Autor: Leo Trevisol"
-                                    + "\nClick no bot�o NOVO JOGO para come�ar.",
+                                    + "\nClick no botao NOVO JOGO para comecar.",
                             "Jogo da velha em Java", 0, duke);
                 }
             });
         }
         return botaoInfo;
+    }
+    public static void main(String[] args) {
+
+        new Classe_26_MeuJogodaVelha();
+
     }
 }
 
