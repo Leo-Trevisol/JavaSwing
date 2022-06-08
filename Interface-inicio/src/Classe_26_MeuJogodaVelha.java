@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Classe_26_MeuJogodaVelha extends JFrame {
 
-    JLabel placar, xis, bola;
+    JLabel placar, xis, bola, vencedor, ganhador;
     JButton novojogo, zerar, botaoInfo;
     JButton a, b, c, d, e, f, g, h, i;
     JPanel painel;
@@ -14,6 +14,8 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
     int ptx = 0;
     int pto = 0;
     Container tela;
+    Font font = new Font("Verdana", Font.BOLD, 24);
+    Font font2 = new Font("Verdana", Font.BOLD, 16);
 
     // CONSTRUTOR PUXANDO OS METODOS ===
 
@@ -43,23 +45,37 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
 
         placar = new JLabel("PLACAR:");
 
-        xis = new JLabel("X= " + ptx);
-        bola = new JLabel("O= " + pto);
+        xis = new JLabel("X = " + ptx);
+        bola = new JLabel("O = " + pto);
+        vencedor = new JLabel();
+        ganhador = new JLabel();
 
         novojogo = new JButton("NOVO JOGO");
         zerar = new JButton("ZERAR PLACAR");
 
+
         painel = new JPanel();
 
+
+
         a = new JButton();
+        a.setFont(font);
         b = new JButton();
+        b.setFont(font);
         c = new JButton();
+        c.setFont(font);
         d = new JButton();
+        d.setFont(font);
         e = new JButton();
+        e.setFont(font);
         f = new JButton();
+        f.setFont(font);
         g = new JButton();
+        g.setFont(font);
         h = new JButton();
+        h.setFont(font);
         i = new JButton();
+        i.setFont(font);
 
     }
 
@@ -70,13 +86,27 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         tela = getContentPane();
         setLayout(null);
 
-        placar.setBounds(425, 50, 50, 20);
+        placar.setBounds(400, 20, 200, 50);
+        placar.setFont(font);
         tela.add(placar);
 
-        xis.setBounds(425, 75, 50, 20);
+
+        xis.setBounds(425, 65, 50, 20);
+        xis.setFont(font2);
         tela.add(xis);
-        bola.setBounds(425, 100, 50, 20);
+        bola.setBounds(425, 90, 50, 20);
+        bola.setFont(font2);
         tela.add(bola);
+
+        ganhador.setBounds(375,225,200,20);
+        tela.add(ganhador);
+        ganhador.setVisible(false);
+
+        vencedor.setBounds(400,250,200,20);
+        tela.add(vencedor);
+        vencedor.setForeground(Color.red);
+
+
 
         novojogo.setBounds(385, 125, 125, 30);
         tela.add(novojogo);
@@ -84,6 +114,8 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
         tela.add(zerar);
 
           tela.add(buttoninformacao());
+
+
 
         // CRIANDO PAINEL COMO GRID LAYOUT 3X3 PARA BOTAR OS BOTOES ===
 
@@ -120,6 +152,8 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                 h.setText("");
                 i.setText("");
                 verificarx();
+                ganhador.setText("");
+                vencedor.setText("");
             }
         });
     }
@@ -134,6 +168,8 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                 pto = 0;
                 xis.setText("X= 0");
                 bola.setText("O= 0");
+                ganhador.setText("");
+                vencedor.setText("");
             }
         });
     }
@@ -260,18 +296,25 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             if (xo) {
 
                 JOptionPane.showMessageDialog(null, "ACABOU! = X VENCEU");
+                ganhador.setText("VENCEDOR DA RODADA:");
+                ganhador.setVisible(true);
+                vencedor.setText("JOGADOR X");
                 ptx++;
                 xis.setText("X= " + ptx);
                 conf = false;
 
             } else {
                 JOptionPane.showMessageDialog(null, "ACABOU! = O VENCEU");
+                ganhador.setText("VENCEDOR DA RODADA:");
+                ganhador.setVisible(true);
+                vencedor.setText("JOGADOR O");
                 pto++;
                 bola.setText("O= " + pto);
                 conf = false;
             }
 
         }
+        
 
     }
     //CRIACAO BUTTON DE INFORMACAO ===
