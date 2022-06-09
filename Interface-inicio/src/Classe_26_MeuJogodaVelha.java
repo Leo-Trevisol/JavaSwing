@@ -8,6 +8,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
     JLabel placar, xis, bola, vencedor, ganhador;
     JButton novojogo, zerar, botaoInfo;
     JButton a, b, c, d, e, f, g, h, i;
+    JButton empate[] = new JButton[9];
     JPanel painel;
     boolean xo = false;
     boolean conf = true;
@@ -181,18 +182,21 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(a);
+                empate[0] = a;
             }
         });
         b.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(b);
+                empate[1] = b;
             }
         });
         c.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(c);
+                empate[2] = c;
             }
         });
 
@@ -200,6 +204,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(d);
+                empate[3] = d;
             }
         });
         e.addActionListener(new ActionListener() {
@@ -207,24 +212,28 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             @Override
             public void actionPerformed(ActionEvent u) {
                 verificatudo(e);
+                empate[4] = e;
             }
         });
         f.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(f);
+                empate[5] = f;
             }
         });
         g.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(g);
+                empate[6] = g;
             }
         });
         h.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent u) {
                 verificatudo(h);
+                empate[7] = h;
             }
         });
 
@@ -232,6 +241,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 verificatudo(i);
+                empate[8] = i;
             }
         });
     }
@@ -239,12 +249,14 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
     //METODO QUE VERIFICA SE A CASA JA FOI PREENCHIDA ===
 
     public void verificatudo(JButton x) {
+
         if (conf){
 
         if (xo) {
                 if (x.getText().isEmpty()) {
                     x.setText("O");
                     xo = false;
+                    empate();
                     verificarx();
                 } else {
                     JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
@@ -255,6 +267,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
                 if (x.getText().isEmpty()) {
                     x.setText("X");
                     xo = true;
+                    empate();
                     verificarx();
                 } else {
                     JOptionPane.showMessageDialog(null, "Essa casa ja foi preenchida!");
@@ -268,6 +281,7 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
 
         }
     }
+
 
 
     //METODO DE VERIFICAR SE ALGUEM GANHOU OU SE DEU VELHA ===
@@ -314,7 +328,24 @@ public class Classe_26_MeuJogodaVelha extends JFrame {
             }
 
         }
-        
+
+    }
+    public void empate(){
+        int cont = 0;
+        for(int i=0;i<9;i++){
+            try {
+
+
+            if (empate[i].getText() != null) {
+                cont++;
+            }
+            }catch (Exception e){}
+        }
+        if(cont==9){
+            JOptionPane.showMessageDialog(null, "O JOGO EMPATOU.\n"
+                    + "CLIQUE EM NOVO JOGO PARA\n"
+                    + "JOGAR NOVAMENTE!!");
+        }
 
     }
     //CRIACAO BUTTON DE INFORMACAO ===
