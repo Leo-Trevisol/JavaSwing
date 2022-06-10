@@ -250,6 +250,7 @@ public class Classe_26_ProfJogodaVelha extends JFrame {
     }
 
     public static void main(String[] args) {
+
         new Classe_26_ProfJogodaVelha(); //iniciamos o jogo.
     }
 }

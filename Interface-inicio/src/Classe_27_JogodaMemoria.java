@@ -29,7 +29,7 @@ public class Classe_27_JogodaMemoria implements ActionListener {
         mFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mFrame.setSize(300, 450);
         mFrame.setLayout(new GridLayout(4, 4));
-        mDefaultIcon = new ImageIcon("card8.gif");
+        mDefaultIcon = new ImageIcon("/cartas/card8.gif");
 
         createMenuBar();
         createIconArray();
