@@ -16,7 +16,8 @@ public class Classe_28_MP3 implements ActionListener {
         new Classe_28_MP3();
     }
 
-    //Declaração das variáveis
+    //DECLARANDO VARIAVEIS ===
+
     JFrame frame;
     JLabel songNameLabel = new JLabel();
     JButton selectButton = new JButton("Selecionar o Mp3");
@@ -25,21 +26,25 @@ public class Classe_28_MP3 implements ActionListener {
     JButton resumeButton = new JButton("Retomar");
     JButton stopButton = new JButton("Parar");
 
-    JFileChooser fileChooser;
-    FileInputStream fileInputStream;
-    BufferedInputStream bufferedInputStream;
+    JFileChooser fileChooser; //fornece um mecanismo simples para o usuário escolher um arquivo.
+    FileInputStream fileInputStream; //obtém bytes de entrada de um arquivo em um sistema de arquivos.
+    BufferedInputStream bufferedInputStream; //diciona funcionalidade a outro fluxo de entrada,
+    // ou seja, a capacidade de armazenar em buffer a entrada e oferecer suporte aos métodos marke
 
-    File myFile = null;
+    File myFile = null; //representa os arquivos e nomes de caminho de diretório de maneira abstrata .
+    // Esta classe é usada para criação de arquivos e diretórios, busca de arquivos, exclusão de arquivos, etc.
+    // O objeto File representa o arquivo/diretório real no disco. A seguir está a lista de construtores para criar um objeto File.
 
     String filename;
     String filePath;
     long totalLength;
     long pause;
-    Player player;
-    Thread playThread;
-    Thread resumeThread;
+    Player player; //uma classe que pode ser usada para armazenar detalhes típicos de qualquer jogador em um jogo , por exemplo, pontuação e nome.
+    Thread playThread; //Uma thread é uma thread de execução em um programa.
+    Thread resumeThread; //Uma thread é uma thread de execução em um programa.
 
-    //Construtor da classe MusicPlayer
+    //CONSTRUTOR ===
+
     Classe_28_MP3() {
         prepareGUI();
         addActionEvents();
@@ -47,19 +52,22 @@ public class Classe_28_MP3 implements ActionListener {
         playThread = new Thread(runnablePlay);
         resumeThread = new Thread(runnableResume);
 
-    }//fim MusicPlayer
+    }
 
 
-    //Método que monta a GUI - INTERFACE GRÁFICA DO USUÁRIO
+    //METODO QUE MONTA A GUI - INTERFACE GRÁFICA DO USUÁRIO ===
     public void prepareGUI() {
         frame = new JFrame();
         frame.setTitle("Apliativo de Áudio");
         frame.getContentPane().setLayout(null);
         frame.getContentPane().setBackground(Color.black);
         frame.setSize(440, 200);
-        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);// NAO E POSSIVEL REDIMENSIONAR A TELA
+        frame.setLocationRelativeTo(null); // CRIA A TELA NO CENTRO DO MONITOR
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //ADICIONANDO COMPONENTES NA TELA ===
 
         selectButton.setBounds(160, 10, 100, 30);
         frame.add(selectButton);
@@ -80,23 +88,23 @@ public class Classe_28_MP3 implements ActionListener {
         frame.add(stopButton);
     }
 
-    //Método que trata as ações dos botões
+    //METODO QUE TRATA AS ACOES DOS BUTTONS ===
     public void addActionEvents() {
-        //Registrando as ações dos buttons
+        //Registrando as acoes dos buttons ===
         selectButton.addActionListener(this);
         playButton.addActionListener(this);
         pauseButton.addActionListener(this);
         resumeButton.addActionListener(this);
         stopButton.addActionListener(this);
-    }//fim addActionEvents
+    }
 
 
-    //Método que trata a busca do arquivo de áudio dentro da janela de diálogo
+    //METODO QUE TRATA A BUSCA DO ARQUIVO DE AUDIO DENTRO DA JANELA DE DIALOGO ===
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == selectButton) {
-            //código para selecionar nosso arquivo mp3 da janela de diálogo
+            //código para selecionar nosso arquivo mp3 da janela de diálogo ===
             fileChooser = new JFileChooser();
             fileChooser.setCurrentDirectory(new File("C:/"));
 //            fileChooser.setCurrentDirectory(new File("C:\\Users\\Secretaria\\Desktop\\PLAYER - MP3 - JAVA"));
@@ -113,7 +121,7 @@ public class Classe_28_MP3 implements ActionListener {
         }
 
         if (e.getSource() == playButton) {
-            //estartando a thread
+            //startando a thread
             //iniciando a execução do áudio
             playThread.start();
             songNameLabel.setText("Execute o play : " + filename);
